@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<h1 class="display-4">HIT339 Assignment 1</h1>
+
+<ul class="navbar-nav flex-grow-1">
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="MyItems" asp-action="UserPage">
+            <h3>User Page</h3>
+            <p>View current users items for sale as well as sales made</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index">
+            <h3>All Items For Sale</h3>
+            <p>Shows all items currently listed from every user</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Sales" asp-action="MyPurchases">
+            <h3>My Purchases</h3>
+            <p>Shows your purchase history</p>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="" asp-controller="Carts" asp-action="Index">
+            <h3>Cart</h3>
+            <p>Shows the items you have added to your cart</p>
+        </a>
+    </li>
+
+</ul>

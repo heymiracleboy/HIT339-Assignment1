@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "Ass1ContextConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "ItemDBContext"
+    }
+  }
+}

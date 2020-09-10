@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Ass1.Models.Sales>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Purchase History</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Item Name
+            </th>
+            <th>
+                Total Spent on Purchase
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Buyer)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SellerPerson)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerPerson)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    @{ decimal total = 0;
+
+        @foreach (var item in Model)
+        {
+            total += item.TotalSpent;
+
+        }
+        <h2>Total Amount: $@(total)</h2>
+
+    }
+
+
+
+</p>

@@ -1,0 +1,126 @@
+﻿@model Ass1.ViewModel.UserPageViewModel
+@{
+    ViewData["Title"] = "UserPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>User Page</h1>
+
+<p>
+    <a asp-action="Create">List New Item</a>
+</p>
+
+<h2>My Items</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Maker
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Item)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Maker)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ItemId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ItemId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ItemId">Delete</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<h2>My Sales</h2>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>
+                Buyer
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Total price of sale
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Seller
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Sale)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buyer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalSpent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SellerPerson)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<p>
+    @{ decimal total = 0;
+
+        @foreach (var item in Model.Sale)
+        {
+            total += item.TotalSpent;
+
+        }
+        <h2>Total Sales Amount: $@(total)</h2>
+
+    }
+
+
+
+</p>
