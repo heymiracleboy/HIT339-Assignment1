@@ -52,5 +52,20 @@
     </tbody>
 </table>
 <p>
-    <a asp-action="Purchase">Purchase all</a>
+    @{ decimal total = 0;
+
+        @foreach (var item in Model)
+        {
+            total += item.Price;
+
+        }
+        <h2>Total Costs: $@(total)</h2>
+
+    }
+
+
+
+</p>
+<p>
+    <h2><a asp-action="Purchase">Purchase all</a></h2>
 </p>
