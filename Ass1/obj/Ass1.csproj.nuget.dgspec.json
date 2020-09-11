@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tommy\\Desktop\\git\\Ass1\\Ass1\\Ass1.csproj": {}
+    "C:\\Users\\Tommy\\Desktop\\git\\HIT339-Assignment1\\Ass1\\Ass1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tommy\\Desktop\\git\\Ass1\\Ass1\\Ass1.csproj": {
+    "C:\\Users\\Tommy\\Desktop\\git\\HIT339-Assignment1\\Ass1\\Ass1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\git\\Ass1\\Ass1\\Ass1.csproj",
+        "projectUniqueName": "C:\\Users\\Tommy\\Desktop\\git\\HIT339-Assignment1\\Ass1\\Ass1.csproj",
         "projectName": "Ass1",
-        "projectPath": "C:\\Users\\Tommy\\Desktop\\git\\Ass1\\Ass1\\Ass1.csproj",
+        "projectPath": "C:\\Users\\Tommy\\Desktop\\git\\HIT339-Assignment1\\Ass1\\Ass1.csproj",
         "packagesPath": "C:\\Users\\Tommy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tommy\\Desktop\\git\\Ass1\\Ass1\\obj\\",
+        "outputPath": "C:\\Users\\Tommy\\Desktop\\git\\HIT339-Assignment1\\Ass1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tommy\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -265,6 +265,7 @@ namespace Ass1.Controllers
             //Getting name of item and seller so that the Nameofitem and seller row in carts table can be assigned
             var name = item.Name;
             cart.NameOfItem = name;
+
             var seller = item.Seller;
             cart.Seller = seller;
             var pricing = item.Price * cart.Quantity;
